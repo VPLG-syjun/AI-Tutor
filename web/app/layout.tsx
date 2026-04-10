@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
-import { Inter, Source_Serif_4 } from "next/font/google";
+import { DM_Sans, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 import ThemeScript from "@/components/ThemeScript";
 import { AppShellProvider } from "@/context/AppShellContext";
 import { I18nClientBridge } from "@/i18n/I18nClientBridge";
 
-const fontSans = Inter({
+const fontSans = DM_Sans({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-sans",
 });
 
-const fontSerif = Source_Serif_4({
+const fontSerif = Libre_Baskerville({
   subsets: ["latin"],
+  weight: ["400", "700"],
   display: "swap",
   variable: "--font-serif",
 });
