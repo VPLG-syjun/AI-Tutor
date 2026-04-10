@@ -3,48 +3,49 @@
 @tailwind utilities;
 
 @layer base {
+  /* Tesla-inspired: Pure White + Electric Blue + Carbon Dark */
   :root {
-    --background: #FAF9F6;
-    --foreground: #2D2B28;
-    --card: #FFFFFF;
-    --card-foreground: #2D2B28;
+    --background: #FFFFFF;
+    --foreground: #171A20;
+    --card: #F4F4F4;
+    --card-foreground: #171A20;
     --popover: #FFFFFF;
-    --popover-foreground: #2D2B28;
-    --primary: #C35A2C;
+    --popover-foreground: #171A20;
+    --primary: #3E6AE1;
     --primary-foreground: #FFFFFF;
-    --secondary: #F0EDE7;
-    --secondary-foreground: #2D2B28;
-    --muted: #F0EDE7;
-    --muted-foreground: #8B8580;
-    --accent: #F0EDE7;
-    --accent-foreground: #2D2B28;
-    --destructive: #D44A3C;
+    --secondary: #F4F4F4;
+    --secondary-foreground: #393C41;
+    --muted: #F4F4F4;
+    --muted-foreground: #5C5E62;
+    --accent: #F4F4F4;
+    --accent-foreground: #171A20;
+    --destructive: #E12D39;
     --destructive-foreground: #FFFFFF;
-    --border: #E8E4DE;
-    --input: #E8E4DE;
-    --ring: #C35A2C;
+    --border: #EEEEEE;
+    --input: #EEEEEE;
+    --ring: #3E6AE1;
   }
 
   .dark {
-    --background: #1A1918;
-    --foreground: #E8E4DE;
-    --card: #242220;
-    --card-foreground: #E8E4DE;
-    --popover: #242220;
-    --popover-foreground: #E8E4DE;
-    --primary: #D4734B;
-    --primary-foreground: #1A1918;
-    --secondary: #2A2725;
-    --secondary-foreground: #E8E4DE;
-    --muted: #2A2725;
-    --muted-foreground: #9B9590;
-    --accent: #302D2A;
-    --accent-foreground: #E8E4DE;
-    --destructive: #D44A3C;
+    --background: #171A20;
+    --foreground: #E5E5E5;
+    --card: #1E2128;
+    --card-foreground: #E5E5E5;
+    --popover: #1E2128;
+    --popover-foreground: #E5E5E5;
+    --primary: #3E6AE1;
+    --primary-foreground: #FFFFFF;
+    --secondary: #252830;
+    --secondary-foreground: #D0D1D2;
+    --muted: #252830;
+    --muted-foreground: #8E8E8E;
+    --accent: #2A2D36;
+    --accent-foreground: #E5E5E5;
+    --destructive: #E12D39;
     --destructive-foreground: #FFFFFF;
-    --border: #3A3634;
-    --input: #3A3634;
-    --ring: #D4734B;
+    --border: #2A2D36;
+    --input: #2A2D36;
+    --ring: #3E6AE1;
   }
 
   * {
