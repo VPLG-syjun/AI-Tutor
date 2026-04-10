@@ -4,18 +4,10 @@
 // The launcher injects NEXT_PUBLIC_API_BASE from the canonical project-root `.env`.
 export const API_BASE_URL =
   process.env.NEXT_PUBLIC_API_BASE ||
-  (() => {
-    if (typeof window !== "undefined") {
-      console.error("NEXT_PUBLIC_API_BASE is not set.");
-      console.error(
-        "Please configure NEXT_PUBLIC_API_BASE in your environment and restart the application.",
-      );
-      console.error("Run python scripts/start_tour.py to rebuild your local setup if needed.");
-    }
-    throw new Error(
-      "NEXT_PUBLIC_API_BASE is not configured. Please set it in your environment and restart.",
-    );
-  })();
+  process.env.NEXT_PUBLIC_API_BASE_EXTERNAL ||
+  (typeof window !== "undefined"
+    ? `${window.location.protocol}//${window.location.hostname}:8001`
+    : "http://localhost:8001");
 
 /**
  * Construct a full API URL from a path
