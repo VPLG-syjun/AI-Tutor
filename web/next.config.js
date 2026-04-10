@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-  // Standalone output: self-contained server.js + minimal node_modules
-  // This eliminates the need to copy the full node_modules into Docker production images
-  output: "standalone",
+  // Use standalone only for Docker builds; Vercel handles output automatically
+  output: process.env.VERCEL ? undefined : "standalone",
 
   // Move dev indicator to bottom-right corner
   devIndicators: {

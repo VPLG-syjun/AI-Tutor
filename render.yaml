@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: ai-tutor-backend
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements/server.txt && pip install -e .
+    startCommand: python -m deeptutor.api.run_server
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.15"
+      - key: LLM_BINDING
+        value: openai
+      - key: LLM_MODEL
+        value: gpt-4o-mini
+      - key: LLM_API_KEY
+        sync: false
+      - key: LLM_HOST
+        value: https://api.openai.com/v1
+      - key: EMBEDDING_BINDING
+        value: openai
+      - key: EMBEDDING_MODEL
+        value: text-embedding-3-large
+      - key: EMBEDDING_API_KEY
+        sync: false
+      - key: EMBEDDING_HOST
+        value: https://api.openai.com/v1
+      - key: EMBEDDING_DIMENSION
+        value: "3072"
+      - key: BACKEND_PORT
+        value: "8001"
